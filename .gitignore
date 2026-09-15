@@ -1,0 +1,66 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ===== 虚拟环境 =====
+.venv/
+venv/
+env/
+ENV/
+
+# ===== 环境变量（含 API 密钥等敏感信息，严禁提交）=====
+.env
+.env.*
+!.env.example
+
+# ===== IDE / 编辑器 / 系统 =====
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ===== 日志 =====
+*.log
+logs/
+nohup.out
+
+# ===== 数据库文件（运行时生成，体积大）=====
+data/*.db
+data/*.db-journal
+data/*.db-wal
+data/*.db-shm
+
+# ===== 向量索引（ingest 生成，体积大）=====
+data/vector_store.json
+data/vector_store.json.bak
+
+# ===== 知识库文档：默认全部纳入版本管理，不忽略 =====
+# 知识库（data/docs/）是他人 clone 后运行 RAG 的必要内容，忽略会导致知识库残缺。
+# 其中大文件（PDF/JPG）体积较大，建议用 Git LFS 管理（见 .gitattributes），
+# 而非在 .gitignore 中忽略——忽略会破坏他人拉取使用的完整性。
+
+# ===== 临时诊断/OCR 脚本与产物 =====
+_diag_*.py
+_ocr*.txt
+_page*.png
+*.tmp
+*.bak
+*.orig
+
+# ===== 测试与覆盖率 =====
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/

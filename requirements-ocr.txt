@@ -1,0 +1,15 @@
+# OCR fallback dependencies (optional).
+# Only needed for recognizing scanned/image-based PDFs.
+# Text-based PDF / md / docx / pptx / xlsx do NOT need these.
+#
+# Install: pip install -r requirements-ocr.txt
+#
+# Option A (recommended): PaddleOCR, strong Chinese recognition, pure pip install
+PyMuPDF>=1.24
+paddleocr>=2.7
+paddlepaddle>=2.6
+
+# Option B (alternative): pytesseract requires system tesseract-ocr + chi_sim,
+# then pip install pytesseract and Pillow
+# pytesseract>=0.3
+# Pillow>=10.0
